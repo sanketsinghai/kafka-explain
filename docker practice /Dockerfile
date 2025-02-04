@@ -1,10 +1,10 @@
-# Use an official Python runtime as a base image
+# Use Python 3.9 as the base image
 FROM python:3.9
 
 # Set the working directory
 WORKDIR /app
 
-# Copy the current directory contents into the container
+# Copy the application files
 COPY . /app
 
 # Install dependencies
@@ -13,5 +13,5 @@ RUN pip install -r requirements.txt
 # Expose port 5000
 EXPOSE 5000
 
-# Run the application
+# Command to run the app
 CMD ["python", "app.py"]
